@@ -1,11 +1,11 @@
-﻿<Window x:Class="Sotov.MainActiv"
+﻿<Window x:Class="Sotov.Profile"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Sotov"
         mc:Ignorable="d"
-        Title="MainActiv" Height="650" Width="800" WindowStyle="None" AllowsTransparency="True" WindowStartupLocation="CenterScreen">
+        Title="Profile" Height="650" Width="800" WindowStyle="None" AllowsTransparency="True" WindowStartupLocation="CenterScreen">
     <Grid Background="Bisque">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -26,7 +26,7 @@
             </Border.Background>
             <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left">
                 <Image HorizontalAlignment="Left" Source="/pngwing.com.png"/>
-                <TextBlock FontSize="22" Height="33" Foreground="White"><Run Text="Сотовик"/></TextBlock>
+                <TextBlock FontSize="22" Height="33" Foreground="White"><Run Text="Личный кабинет"/></TextBlock>
             </StackPanel>
         </Border>
         <Border Grid.Column="1" Grid.Row="1" Grid.RowSpan="1" CornerRadius="0,0,10,0" Grid.ColumnSpan="2" Margin="266,0,0,0">
@@ -36,7 +36,7 @@
                     <GradientStop Color="#FFD194" Offset="1"/>
                 </LinearGradientBrush>
             </Border.Background>
-            <Label x:Name="Kabinet" Content="Личный кабинет" Foreground="White" HorizontalAlignment="Left" Height="45" Margin="114,10,0,15" FontSize="18" MouseLeftButtonUp="Kabinet_MouseLeftButtonUp" Background="{x:Null}"/>
+            <Label x:Name="Return" Content="Сменить аккаунта" Foreground="White" HorizontalAlignment="Left" Height="45" Margin="104,10,0,15" FontSize="18" MouseLeftButtonUp="Return_MouseLeftButtonUp" Background="{x:Null}"/>
         </Border>
         <Border Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3">
             <Border.Background>
@@ -47,22 +47,6 @@
             </Border.Background>
             <StackPanel>
                 <Image Source="/krestik.png" Width="15" Height="14" HorizontalAlignment="Right" Margin="0,1,15,0" MouseLeftButtonUp="Image_MouseLeftButtonUp" />
-            </StackPanel>
-        </Border>
-        <Border Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="3">
-            <StackPanel>
-                <ListBox Height="566" Background="Bisque" BorderBrush="#FFD1913C" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                    <StackPanel Width="786" Orientation="Horizontal" Margin="0,5,0,5">
-                        <Image Source="/600x600.png" Height="154" Width="126"/>
-                        <TextBlock Text="Смартфон Samsung Galaxy S21 FE 5G 8/256 Gb Olive" FontSize="18" Foreground="Black" Width="468" Margin="5,5,5,5"/>
-                        <TextBlock Text="Ценна: 45 490₽" FontSize="24" Width="176" FontStyle="Italic" Margin="5,5,5,5"/>
-                    </StackPanel>
-                    <StackPanel Width="786" Orientation="Horizontal" Margin="0,5,0,5">
-                        <Image Source="/53ce88bf41a93bc546d43aaffaf3309ecb4e762a0674fadb6b7ed852e490cd4a.png" Height="154" Width="126"/>
-                        <TextBlock VerticalAlignment="Stretch" Text="6.73&quot; Смартфон Xiaomi 13 Pro 512 ГБ черный" FontSize="18" Foreground="Black" Margin="5,5,5,5" Width="468"/>
-                        <TextBlock Text="Ценна: 109 999₽" FontSize="24" Width="177" VerticalAlignment="Stretch" FontStyle="Italic" Margin="5,5,5,5"/>
-                    </StackPanel>
-                </ListBox>
             </StackPanel>
         </Border>
     </Grid>

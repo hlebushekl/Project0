@@ -14,14 +14,16 @@
             </RadialGradientBrush>
         </Grid.Background>
         <TextBox x:Name="tb_Log" HorizontalAlignment="Center" Margin="0,97,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" TextAlignment="Left"/>
-        <TextBox x:Name="tb_Pass" HorizontalAlignment="Center" Margin="0,163,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" TextAlignment="Left" Background="White"/>
-        <Button x:Name="bt_Auth" Content="Авторизация" HorizontalAlignment="Left" Margin="77,35,0,0" VerticalAlignment="Top" Foreground="#FFFFE4C3" Background="#FF609BC8" Height="34" Width="90"/>
-        <Button x:Name="bt_Regist" Content="Регистрация" HorizontalAlignment="Center" Margin="0,35,0,0" VerticalAlignment="Top" Foreground="#FFFFE4C3" Background="#FF609BC8" Height="34" Width="90" RenderTransformOrigin="0.506,0.56"/>
+        <PasswordBox x:Name="tb_Pass" HorizontalAlignment="Center" Margin="0,163,0,0"  VerticalAlignment="Top" Width="250" Background="White"/>
         <Label Content="Логин" HorizontalAlignment="Left" Margin="100,66,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.316,-0.114" Foreground="#FFFAFDFF"/>
         <Label Content="Пароль" HorizontalAlignment="Left" Margin="100,0,0,0" VerticalAlignment="Center" RenderTransformOrigin="0.316,-0.114" Foreground="#FFFAFDFF"/>
-        <Border BorderThickness="1" Margin="100,202,258,35" Background="#FF609BC8" CornerRadius="15,15,15,15"/>
-        <Border BorderThickness="1" Margin="258,202,100,35" Background="#FF609BC8" CornerRadius="15,15,15,15"/>
-        <Image HorizontalAlignment="Left" Height="30" Margin="396,10,0,0" VerticalAlignment="Top" Width="37" Source="/krestik.png" MouseLeftButtonUp="Image_MouseLeftButtonUp"/>
+        <Border BorderThickness="1" Margin="100,202,258,35" Background="#FF609BC8" CornerRadius="15,15,15,15">
+            <Label Content="Авторизация" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" MouseLeftButtonUp="Label_MouseLeftButtonUp"/>
+        </Border>
+        <Border BorderThickness="1" Margin="258,202,100,35" Background="#FF609BC8" CornerRadius="15,15,15,15">
+            <Label Content="Регистрация" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" Width="82" MouseLeftButtonUp="Label_MouseLeftButtonUp_1"/>
+        </Border>
+        <Image HorizontalAlignment="Left" Height="18" Margin="422,10,0,0" VerticalAlignment="Top" Width="29" Source="/krestik.png" MouseLeftButtonUp="Image_MouseLeftButtonUp"/>
 
     </Grid>
 </Window>

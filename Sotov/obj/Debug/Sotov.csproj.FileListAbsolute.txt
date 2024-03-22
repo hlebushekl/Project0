@@ -16,3 +16,7 @@ E:\AREF\Sotov\obj\Debug\Sotov.exe
 E:\AREF\Sotov\obj\Debug\Sotov.pdb
 E:\AREF\Sotov\obj\Debug\MainActiv.g.cs
 E:\AREF\Sotov\obj\Debug\MainActiv.baml
+E:\AREF\Sotov\obj\Debug\Profile.g.cs
+E:\AREF\Sotov\obj\Debug\Profile.baml
+E:\AREF\Sotov\obj\Debug\Registr.g.cs
+E:\AREF\Sotov\obj\Debug\Registr.baml

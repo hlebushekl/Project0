@@ -15,34 +15,25 @@ using System.Windows.Shapes;
 namespace Sotov
 {
     /// <summary>
-    /// Логика взаимодействия для MainActiv.xaml
+    /// Логика взаимодействия для Profile.xaml
     /// </summary>
-    public partial class MainActiv : Window
+    public partial class Profile : Window
     {
-        public MainActiv()
+        public Profile()
         {
             InitializeComponent();
         }
 
-        private void Kabinet_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+
+        private void Return_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-            if (ClassDebug.res == false)
-            {
-                MainWindow kl = new MainWindow();
-                kl.Show();
-            }
-            else if (ClassDebug.res == true)
-            {
-                Profile lk = new Profile();
-                lk.Show();
-            }
-            else
-                return;
+            ClassDebug.res = false;
+            Close();
         }
 
         private void Image_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-            Close();
+            Close ();
         }
     }
 }
