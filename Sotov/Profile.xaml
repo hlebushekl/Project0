@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Sotov"
         mc:Ignorable="d"
-        Title="Profile" Height="650" Width="800" WindowStyle="None" AllowsTransparency="True" WindowStartupLocation="CenterScreen">
+        Title="Profile" Height="650" Width="800" WindowStyle="None" AllowsTransparency="True" WindowStartupLocation="CenterOwner">
     <Grid Background="Bisque">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -47,6 +47,19 @@
             </Border.Background>
             <StackPanel>
                 <Image Source="/krestik.png" Width="15" Height="14" HorizontalAlignment="Right" Margin="0,1,15,0" MouseLeftButtonUp="Image_MouseLeftButtonUp" />
+            </StackPanel>
+        </Border>
+        <Border Grid.Column="0" Grid.Row="3" Grid.RowSpan="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" CornerRadius="0,45,45,0" Background="#FFD1913C">
+            <StackPanel>
+                <TextBlock Margin="5,40,5,5" Foreground="White" FontSize="24">
+                    Список покупок:
+                </TextBlock>
+                <ListBox Height="389" Background="#FFD1913C" BorderBrush="#FFD1913C">
+                    
+                </ListBox>
+                <TextBlock Foreground="White" FontSize="24">
+                    Итого:
+                </TextBlock>
             </StackPanel>
         </Border>
     </Grid>

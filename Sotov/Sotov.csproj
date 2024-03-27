@@ -56,6 +56,12 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="ClassDebug.cs" />
+    <Compile Include="Connecting.cs" />
+    <Compile Include="FirstTryDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FirstTryDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Registr.xaml.cs">
       <DependentUpon>Registr.xaml</DependentUpon>
     </Compile>
@@ -108,6 +114,17 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="FirstTryDataSet.xsc">
+      <DependentUpon>FirstTryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FirstTryDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FirstTryDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FirstTryDataSet.xss">
+      <DependentUpon>FirstTryDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -127,6 +144,11 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="53ce88bf41a93bc546d43aaffaf3309ecb4e762a0674fadb6b7ed852e490cd4a.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="FirstTry.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
