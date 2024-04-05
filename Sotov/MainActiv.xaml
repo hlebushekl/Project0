@@ -29,7 +29,7 @@
                 <TextBlock FontSize="22" Height="33" Foreground="White"><Run Text="Сотовик"/></TextBlock>
             </StackPanel>
         </Border>
-        <Border Grid.Column="1" Grid.Row="1" Grid.RowSpan="1" CornerRadius="0,0,10,0" Grid.ColumnSpan="2" Margin="266,0,0,0">
+        <Border x:Name="Head2" Grid.Column="1" Grid.Row="1" Grid.RowSpan="1" CornerRadius="0,0,10,0" Grid.ColumnSpan="2" Margin="266,0,0,0">
             <Border.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#D1913C"/>
@@ -38,7 +38,7 @@
             </Border.Background>
             <Label x:Name="Kabinet" Content="Личный кабинет" Foreground="White" HorizontalAlignment="Left" Height="45" Margin="114,10,0,15" FontSize="18" MouseLeftButtonUp="Kabinet_MouseLeftButtonUp" Background="{x:Null}"/>
         </Border>
-        <Border Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3">
+        <Border x:Name="UpHead" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3">
             <Border.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FFD194"/>
@@ -49,18 +49,18 @@
                 <Image Source="/krestik.png" Width="15" Height="14" HorizontalAlignment="Right" Margin="0,1,15,0" MouseLeftButtonUp="Image_MouseLeftButtonUp" />
             </StackPanel>
         </Border>
-        <Border Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="3">
+        <Border x:Name="Main" Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="3">
             <StackPanel>
                 <ListBox Height="566" Background="Bisque" BorderBrush="#FFD1913C" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                     <StackPanel Width="786" Orientation="Horizontal" Margin="0,5,0,5">
                         <Image Source="/600x600.png" Height="154" Width="126"/>
-                        <TextBlock Text="Смартфон Samsung Galaxy S21 FE 5G 8/256 Gb Olive" FontSize="18" Foreground="Black" Width="468" Margin="5,5,5,5"/>
-                        <TextBlock Text="Ценна: 45 490₽" FontSize="24" Width="176" FontStyle="Italic" Margin="5,5,5,5"/>
+                        <TextBlock Text="Смартфон Samsung Galaxy S21 FE 5G 8/256 Gb Olive" TextWrapping="Wrap" FontSize="18" Foreground="Black" Width="441" Margin="5,5,5,5"/>
+                        <TextBlock Text="Ценна: 45 490₽"  FontSize="24" Width="197" FontStyle="Italic" Margin="5,5,5,5"/>
                     </StackPanel>
                     <StackPanel Width="786" Orientation="Horizontal" Margin="0,5,0,5">
                         <Image Source="/53ce88bf41a93bc546d43aaffaf3309ecb4e762a0674fadb6b7ed852e490cd4a.png" Height="154" Width="126"/>
-                        <TextBlock VerticalAlignment="Stretch" Text="6.73&quot; Смартфон Xiaomi 13 Pro 512 ГБ черный" FontSize="18" Foreground="Black" Margin="5,5,5,5" Width="468"/>
-                        <TextBlock Text="Ценна: 109 999₽" FontSize="24" Width="177" VerticalAlignment="Stretch" FontStyle="Italic" Margin="5,5,5,5"/>
+                        <TextBlock VerticalAlignment="Stretch" Text="6.73&quot; Смартфон Xiaomi 13 Pro 512 ГБ черный" FontSize="18" Foreground="Black" Margin="5,5,5,5" Width="445"/>
+                        <TextBlock Text="Ценна: 109 999₽"  FontSize="24" Width="194" VerticalAlignment="Stretch" FontStyle="Italic" Margin="5,5,5,5"/>
                     </StackPanel>
                 </ListBox>
             </StackPanel>

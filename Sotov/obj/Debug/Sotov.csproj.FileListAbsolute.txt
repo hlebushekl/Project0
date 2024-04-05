@@ -44,3 +44,5 @@ C:\Something\Sotov\obj\Debug\Sotov.exe
 C:\Something\Sotov\obj\Debug\Sotov.pdb
 C:\Something\Sotov\bin\Debug\FirstTry.accdb
 C:\Something\Sotov\obj\Debug\Sotov_Content.g.cs
+E:\AREF\Sotov\bin\Debug\FirstTry.accdb
+E:\AREF\Sotov\obj\Debug\Sotov_Content.g.cs

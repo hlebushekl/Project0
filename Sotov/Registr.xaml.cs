@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Windows;
 using System.Windows.Input;
+using System.Data.OleDb;
+using System.Data;
 
 namespace Sotov
 {
@@ -9,8 +11,6 @@ namespace Sotov
     /// </summary>
     public partial class Registr : Window
     {
-        string Log, Pass, NameL, Number;
-        int kl = ClassDebug.i;
         public Registr()
         {
             InitializeComponent();
@@ -18,25 +18,40 @@ namespace Sotov
 
         private void bt_Registr_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-            Log = Convert.ToString(tb_Log.Text);
-            Pass = Convert.ToString(tb_Pass.Text);
-            NameL = Convert.ToString(tb_Name.Text);
-            Number = Convert.ToString(tb_Nomer.Text);
+            OleDbConnection connect = DataReader.Connection;
+            OleDbDataAdapter ad;
+            DataSet ds = new DataSet();
+            
+            connect.Open();
+            ad = new OleDbDataAdapter("SELECT * FROM Авторизация", connect);
+            ad.Fill(ds);
 
-            if (Log == null || Pass == null || NameL == null || Number == null)
-                MessageBox.Show("Все поля должны быть заполнены");
-            else if (Log != null || Pass != null || NameL != null || Number != null)
+            DataRow dr = ds.Tables[0].NewRow();
+            dr["Логин"] = tb_Log.Text;
+            dr["Пароль"] = tb_Pass.Text;
+            dr["Имя"] = tb_Name.Text;
+            dr["Номер_телефона"] = tb_Nomer.Text;
+
+            ds.Tables[0].Rows.Add(dr);
+
+            OleDbCommandBuilder build = new OleDbCommandBuilder(ad);
+            ad.Update(ds);
+
+            if (tb_Name.Text == "Олег")
             {
-                ClassDebug.Test = Log;
-                ClassDebug.Test1 = Pass;
-                ClassDebug.i++;
-                MessageBox.Show("Регистрация прошла успешно");
-                MainWindow lk = new MainWindow();
-                lk.Show();
-                Close();
+                MessageBox.Show("Ох Олежа, куда тебя понесло?");
+                MainWindow kl = new MainWindow();
+                kl.Show();
+                this.Close();
             }
             else
-                return;
+            {
+                MessageBox.Show("Регистрация прошла успешно");
+                MainWindow kl = new MainWindow();
+                kl.Show();
+                this.Close();
+            }
+            connect.Close();
         }
 
         private void Image_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)

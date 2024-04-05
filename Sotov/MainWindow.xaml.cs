@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Data.OleDb;
 
 namespace Sotov
 {
@@ -20,8 +21,6 @@ namespace Sotov
     /// </summary>
     public partial class MainWindow : Window
     {
-        string Log, Pass;
-        string l1, l2;
         public MainWindow()
         {
             InitializeComponent();
@@ -34,29 +33,28 @@ namespace Sotov
 
         private void Label_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-            Log = tb_Log.Text;
-            Pass = tb_Pass.Password;
-        /*    for (int i = 0; i < ClassDebug.log.Length; i++)
-            {
-                l1 = ClassDebug.log[i];
-                l2 = ClassDebug.pass[i];
-                if (Pass == ClassDebug.pass[i] && Log == ClassDebug.log[i])
-                    return;
-                else
-                    break;
-            } */
-            if (Pass == null && Log == null)
-            {
-                MessageBox.Show("Неверный логин пароль");
-            }
+            string log = tb_Log.Text;
+            string pass = tb_Pass.Password;
+            OleDbDataReader reader;
+            OleDbConnection connection = DataReader.Connection;
+            OleDbCommand command;
+            string src = $@"SELECT * FROM Авторизация WHERE Логин ='{log}' AND Пароль ='{pass}'";
 
-            else if (Pass == ClassDebug.Test1 && Log == ClassDebug.Test)
+            connection.Open();
+
+            command = new OleDbCommand(src, connection);
+            reader = command.ExecuteReader();
+
+            if(reader.Read())
             {
-                ClassDebug.res = true;
-                Close();
+                MessageBox.Show("Добро пожаловать путник");
+                Profile kl = new Profile();
+                kl.Show();
+                this.Close();
             }
             else
-                return;
+                MessageBox.Show("Неверный пароль");
+            connection.Close();
         }
 
         private void Label_MouseLeftButtonUp_1(object sender, MouseButtonEventArgs e)

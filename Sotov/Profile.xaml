@@ -55,11 +55,25 @@
                     Список покупок:
                 </TextBlock>
                 <ListBox Height="389" Background="#FFD1913C" BorderBrush="#FFD1913C">
-                    
+
                 </ListBox>
                 <TextBlock Foreground="White" FontSize="24">
                     Итого:
                 </TextBlock>
+            </StackPanel>
+        </Border>
+        <Border Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2">
+            <StackPanel>
+                <ListBox Background="Bisque" BorderBrush="{x:Null}" Foreground="{x:Null}" Height="415">
+                    <StackPanel Height="156" Width="503" Margin="5,5,5,0" Orientation="Horizontal">
+                        <Image Source="/53ce88bf41a93bc546d43aaffaf3309ecb4e762a0674fadb6b7ed852e490cd4a.png" Height="154" Width="126"/>
+                        <TextBlock VerticalAlignment="Stretch" Text="6.73&quot; Смартфон Xiaomi 13 Pro 512 ГБ черный" FontSize="18" Foreground="Black" Margin="5,5,5,5" Width="335" TextWrapping="Wrap"/>
+                        <RadioButton Width="43" Height="132"/>
+                    </StackPanel>
+                </ListBox>
+                <StackPanel Height="150" Orientation="Horizontal">
+                    <TextBlock/>
+                </StackPanel>
             </StackPanel>
         </Border>
     </Grid>
