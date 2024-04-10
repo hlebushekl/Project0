@@ -10,6 +10,9 @@ namespace Sotov
 {
     public class DataReader
     {
+        /// <summary>
+        /// Подключение к бд
+        /// </summary>
         public static OleDbConnection Connection
         {
             get { return new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=FirstTry.accdb"); }

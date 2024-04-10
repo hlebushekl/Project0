@@ -11,6 +11,9 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Windows.Markup;
+using System.IO;
+using System.Xml;
 
 namespace Sotov
 {
@@ -22,7 +25,17 @@ namespace Sotov
         public MainActiv()
         {
             InitializeComponent();
+
+            string clone = XamlWriter.Save(Makeup);
+            byte[] byteArray = Encoding.UTF8.GetBytes(clone);
+            MemoryStream ms = new MemoryStream(byteArray);
+            StreamReader str = new StreamReader(ms);
+            XmlReader xamel = XmlReader.Create(str);
+            StackPanel reder = (StackPanel)XamlReader.Load(xamel);
+
+            MainClone.Children.Add(reder);
         }
+
 
         private void Kabinet_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
