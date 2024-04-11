@@ -20,7 +20,7 @@
         <Border BorderThickness="1" Margin="338,180,20,57" Background="#FF609BC8" CornerRadius="15,15,15,15">
             <Label x:Name="bt_Registr" Content="Регистрация" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" Width="82" MouseLeftButtonUp="bt_Registr_MouseLeftButtonUp"/>
         </Border>
-        <Image HorizontalAlignment="Left" Height="18" Margin="422,10,0,0" VerticalAlignment="Top" Width="29" Source="/krestik.png" MouseLeftButtonUp="Image_MouseLeftButtonUp"/>
+        <Image HorizontalAlignment="Left" Height="18" Margin="422,10,0,0" VerticalAlignment="Top" Width="29" Source="/Resurs/krestik.png" MouseLeftButtonUp="Image_MouseLeftButtonUp"/>
         <TextBox x:Name="tb_Name" HorizontalAlignment="Left" Margin="25,170,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" TextAlignment="Left" Background="White"/>
         <Label Content="Имя" HorizontalAlignment="Left" Margin="25,144,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.316,-0.114" Foreground="#FFFAFDFF"/>
         <TextBox x:Name="tb_Nomer" HorizontalAlignment="Left" Margin="25,220,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" TextAlignment="Left" Background="White"/>

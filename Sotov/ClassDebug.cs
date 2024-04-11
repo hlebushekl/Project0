@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Markup;
 using System.IO;
 using System.Xml;
+using System.Data.OleDb;
+using System.Data;
 
 namespace Sotov
 {
@@ -15,20 +13,110 @@ namespace Sotov
     {
         public static bool res = false;
     }
-
-    public partial class Maket
+    /// <summary>
+    /// Активная шаблонизация
+    /// </summary>
+    public class Maket
     {
-        public string Clone(string a, string b)
+        //Константы для изменения шаблона
+        static readonly string Name = "6.73&quot; Смартфон Xiaomi 13 Pro 512 ГБ черный";
+        static readonly string Price = "Ценна: 109 999₽";
+        static readonly string Picture = "/Resurs/Mi13Pro.png";
+
+        /// <summary>
+        /// Вытаскивает таблицу
+        /// </summary>
+        /// <returns>Data.Tabels</returns>
+        public static DataTable Data()
+        {
+            string NameTable = "Модель";
+            OleDbConnection connection = DataReader.Connection;
+
+            connection.Open();
+
+            OleDbDataAdapter adapter = new OleDbDataAdapter($"SELECT * FROM {NameTable}", connection);
+            DataSet data = new DataSet();
+            adapter.Fill(data);
+
+            connection.Close();
+
+            return data.Tables[0];
+        }
+
+        /// <summary>
+        /// Обработчик таблицы подтянутой из бд
+        /// </summary>
+        /// <param name="i">Строка</param>
+        /// <param name="j">Столбец</param>
+        /// <returns>Возвращает строку данных</returns>
+        public static string TabelInsertion(int i, int j)
         {
             string result = null;
-            string clone = XamlWriter.Save(b);
-            byte[] byteArray = Encoding.UTF8.GetBytes(clone);
+
+            DataTable table = Data();
+            result = table.Rows[i][j].ToString();
+
+            return result;
+        }
+
+        /// <summary>
+        /// Создание шаблона, изменение его и последующая отправка обратно
+        /// </summary>
+        /// <param name="res">Шаблон</param>
+        /// <returns>Поток байтов для создания нового элемента согласно шаблону</returns>
+        public static UIElement Clone(string res, int i)
+        {
+            string ret = res.Replace(Name, TabelInsertion(i, 2));
+            ret = ret.Replace(Price, "Ценна: " + TabelInsertion(i, 5) + "₽");
+            ret = ret.Replace(Picture, PhotoAdapter(i));
+
+            byte[] byteArray = Encoding.UTF8.GetBytes(ret);
             MemoryStream ms = new MemoryStream(byteArray);
             StreamReader str = new StreamReader(ms);
             XmlReader xamel = XmlReader.Create(str);
             StackPanel reder = (StackPanel)XamlReader.Load(xamel);
 
+            return reder;
+        }
+
+        /// <summary>
+        /// Определяет количество строк в таблице
+        /// </summary>
+        /// <returns>Число</returns>
+        public static int Lenght()
+        {
+            int result = 0;
+
+            DataTable table = Data();
+            result = table.Rows.Count;
+
             return result;
+        }
+
+        /// <summary>
+        /// Обработчик для подстановки фотки
+        /// </summary>
+        /// <returns>Возвращает ссылку на фото</returns>
+        public static string PhotoAdapter(int i)
+        {
+            string result = null;
+
+            DataTable tabel = Data();
+            string operation = tabel.Rows[i][4].ToString();
+            result = Path.Combine("/Resurs", operation);
+
+            return result;
+        }
+    }
+
+    public class DataReader
+    {
+        /// <summary>
+        /// Подключение к бд
+        /// </summary>
+        public static OleDbConnection Connection
+        {
+            get { return new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=FirstTry.accdb"); }
         }
     }
 }

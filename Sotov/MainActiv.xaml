@@ -25,7 +25,7 @@
                 </LinearGradientBrush>
             </Border.Background>
             <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left">
-                <Image HorizontalAlignment="Left" Source="/pngwing.com.png"/>
+                <Image HorizontalAlignment="Left" Source="/Resurs/pngwing.com.png"/>
                 <TextBlock FontSize="22" Height="33" Foreground="White"><Run Text="Сотовик"/></TextBlock>
             </StackPanel>
         </Border>
@@ -46,19 +46,14 @@
                 </LinearGradientBrush>
             </Border.Background>
             <StackPanel>
-                <Image Source="/krestik.png" Width="15" Height="14" HorizontalAlignment="Right" Margin="0,1,15,0" MouseLeftButtonUp="Image_MouseLeftButtonUp" />
+                <Image Source="/Resurs/krestik.png" Width="15" Height="14" HorizontalAlignment="Right" Margin="0,1,15,0" MouseLeftButtonUp="Image_MouseLeftButtonUp" />
             </StackPanel>
         </Border>
         <Border x:Name="Main" Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="3">
             <ScrollViewer>
                 <StackPanel x:Name="MainClone" Height="566" Background="Bisque" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                    <StackPanel Width="786" Orientation="Horizontal" Margin="0,5,0,5">
-                        <Image Source="/600x600.png" Height="154" Width="126"/>
-                        <TextBlock Text="Смартфон Samsung Galaxy S21 FE 5G 8/256 Gb Olive" TextWrapping="Wrap" FontSize="18" Foreground="Black" Width="441" Margin="5,5,5,5"/>
-                        <TextBlock Text="Ценна: 45 490₽"  FontSize="24" Width="197" FontStyle="Italic" Margin="5,5,5,5"/>
-                    </StackPanel>
                     <StackPanel x:Name="Makeup" Width="786" Orientation="Horizontal" Margin="0,5,0,5">
-                        <Image Source="/53ce88bf41a93bc546d43aaffaf3309ecb4e762a0674fadb6b7ed852e490cd4a.png" Height="154" Width="126"/>
+                        <Image Source="/Resurs/Mi13Pro.png" Height="154" Width="126"/>
                         <TextBlock VerticalAlignment="Stretch" Text="6.73&quot; Смартфон Xiaomi 13 Pro 512 ГБ черный" FontSize="18" Foreground="Black" Margin="5,5,5,5" Width="445"/>
                         <TextBlock Text="Ценна: 109 999₽"  FontSize="24" Width="194" VerticalAlignment="Stretch" FontStyle="Italic" Margin="5,5,5,5"/>
                     </StackPanel>

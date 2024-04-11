@@ -25,15 +25,9 @@ namespace Sotov
         public MainActiv()
         {
             InitializeComponent();
-
             string clone = XamlWriter.Save(Makeup);
-            byte[] byteArray = Encoding.UTF8.GetBytes(clone);
-            MemoryStream ms = new MemoryStream(byteArray);
-            StreamReader str = new StreamReader(ms);
-            XmlReader xamel = XmlReader.Create(str);
-            StackPanel reder = (StackPanel)XamlReader.Load(xamel);
-
-            MainClone.Children.Add(reder);
+            for (int i = 0; i < Maket.Lenght(); i++ )
+               MainClone.Children.Add(Maket.Clone(clone, i));
         }
 
 

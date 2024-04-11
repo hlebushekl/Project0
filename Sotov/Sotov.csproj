@@ -56,7 +56,6 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="ClassDebug.cs" />
-    <Compile Include="Connecting.cs" />
     <Compile Include="FirstTryDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -134,21 +133,22 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="pngwing.com.png" />
+    <Resource Include="Resurs\pngwing.com.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="krestik.png" />
+    <Resource Include="Resurs\krestik.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="600x600.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="53ce88bf41a93bc546d43aaffaf3309ecb4e762a0674fadb6b7ed852e490cd4a.png" />
+    <Resource Include="Resurs\GalaxyS21.png" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="FirstTry.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Resource Include="Resurs\ZFlip5.png" />
+    <Resource Include="Resurs\Mi13Pro.png" />
+    <Resource Include="Resurs\Mi12Pro.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

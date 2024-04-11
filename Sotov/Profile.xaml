@@ -25,7 +25,7 @@
                 </LinearGradientBrush>
             </Border.Background>
             <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left">
-                <Image HorizontalAlignment="Left" Source="/pngwing.com.png"/>
+                <Image HorizontalAlignment="Left" Source="/Resurs/pngwing.com.png"/>
                 <TextBlock FontSize="22" Height="33" Foreground="White"><Run Text="Личный кабинет"/></TextBlock>
             </StackPanel>
         </Border>
@@ -66,7 +66,7 @@
             <StackPanel>
                 <ListBox Background="Bisque" BorderBrush="{x:Null}" Foreground="{x:Null}" Height="415">
                     <StackPanel Height="156" Width="503" Margin="5,5,5,0" Orientation="Horizontal">
-                        <Image Source="/53ce88bf41a93bc546d43aaffaf3309ecb4e762a0674fadb6b7ed852e490cd4a.png" Height="154" Width="126"/>
+                        <Image Source="/Resurs/Mi13Pro.png" Height="154" Width="126"/>
                         <TextBlock VerticalAlignment="Stretch" Text="6.73&quot; Смартфон Xiaomi 13 Pro 512 ГБ черный" FontSize="18" Foreground="Black" Margin="5,5,5,5" Width="335" TextWrapping="Wrap"/>
                         <RadioButton Width="43" Height="132"/>
                     </StackPanel>

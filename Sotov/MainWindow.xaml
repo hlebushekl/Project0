@@ -23,7 +23,7 @@
         <Border BorderThickness="1" Margin="258,202,100,35" Background="#FF609BC8" CornerRadius="15,15,15,15">
             <Label Content="Регистрация" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" Width="82" MouseLeftButtonUp="Label_MouseLeftButtonUp_1"/>
         </Border>
-        <Image HorizontalAlignment="Left" Height="18" Margin="422,10,0,0" VerticalAlignment="Top" Width="29" Source="/krestik.png" MouseLeftButtonUp="Image_MouseLeftButtonUp"/>
+        <Image HorizontalAlignment="Left" Height="18" Margin="422,10,0,0" VerticalAlignment="Top" Width="29" Source="/Resurs/krestik.png" MouseLeftButtonUp="Image_MouseLeftButtonUp"/>
 
     </Grid>
 </Window>
