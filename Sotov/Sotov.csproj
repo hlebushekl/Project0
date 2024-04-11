@@ -145,6 +145,7 @@
     <Content Include="FirstTry.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Resource Include="Resurs\Mate50Pro.png" />
     <Resource Include="Resurs\ZFlip5.png" />
     <Resource Include="Resurs\Mi13Pro.png" />
     <Resource Include="Resurs\Mi12Pro.png" />

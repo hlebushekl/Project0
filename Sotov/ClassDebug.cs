@@ -51,7 +51,7 @@ namespace Sotov
         /// <returns>Возвращает строку данных</returns>
         public static string TabelInsertion(int i, int j)
         {
-            string result = null;
+            string result;
 
             DataTable table = Data();
             result = table.Rows[i][j].ToString();
@@ -85,7 +85,7 @@ namespace Sotov
         /// <returns>Число</returns>
         public static int Lenght()
         {
-            int result = 0;
+            int result;
 
             DataTable table = Data();
             result = table.Rows.Count;
@@ -99,7 +99,7 @@ namespace Sotov
         /// <returns>Возвращает ссылку на фото</returns>
         public static string PhotoAdapter(int i)
         {
-            string result = null;
+            string result;
 
             DataTable tabel = Data();
             string operation = tabel.Rows[i][4].ToString();
