@@ -55,6 +55,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AdminPanel.xaml.cs">
+      <DependentUpon>AdminPanel.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ClassDebug.cs" />
     <Compile Include="FirstTryDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -64,6 +67,10 @@
     <Compile Include="Registr.xaml.cs">
       <DependentUpon>Registr.xaml</DependentUpon>
     </Compile>
+    <Page Include="AdminPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainActiv.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

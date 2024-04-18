@@ -1,16 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
+﻿using System.Windows;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+using System.Windows.Controls;
+using System.Windows.Markup;
 
 namespace Sotov
 {
@@ -22,8 +13,27 @@ namespace Sotov
         public Profile()
         {
             InitializeComponent();
+            string clone = XamlWriter.Save(Soup);
+            Stack.Children.Clear();
+            for (int i = 0; i < Maket.Lenght(); i++)
+            {
+                Stack.Children.Add(Maket.Clone(clone, i));
+                StackPanel parent = Stack.Children[i] as StackPanel;
+                
+                foreach(UIElement chill in parent.Children)
+                {
+                    if(chill is CheckBox check)
+                    {
+                        check.Click += click;
+                    }
+                }
+            }
         }
 
+        private void click(object sender, RoutedEventArgs e)
+        {
+            CheckBox check = (CheckBox)sender;
+        }
 
         private void Return_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
@@ -34,6 +44,11 @@ namespace Sotov
         private void Image_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             Close ();
+        }
+
+        private void bt_Offert_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

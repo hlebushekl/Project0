@@ -24,7 +24,7 @@
         <TextBox x:Name="tb_Name" HorizontalAlignment="Left" Margin="25,170,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" TextAlignment="Left" Background="White"/>
         <Label Content="Имя" HorizontalAlignment="Left" Margin="25,144,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.316,-0.114" Foreground="#FFFAFDFF"/>
         <TextBox x:Name="tb_Nomer" HorizontalAlignment="Left" Margin="25,220,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" TextAlignment="Left" Background="White"/>
-        <Label Content="Номер телефона" HorizontalAlignment="Left" Margin="25,194,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.316,-0.114" Foreground="#FFFAFDFF"/>
+        <Label  Content="Номер телефона" HorizontalAlignment="Left" Margin="25,194,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.316,-0.114" Foreground="#FFFAFDFF"/>
 
     </Grid>
 </Window>

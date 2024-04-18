@@ -1,20 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
+﻿using System.Windows;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 using System.Windows.Markup;
-using System.IO;
-using System.Xml;
-using System.Windows.Controls.Primitives;
+using System.Windows.Controls;
 
 namespace Sotov
 {
@@ -27,6 +14,7 @@ namespace Sotov
         {
             InitializeComponent();
             string clone = XamlWriter.Save(Makeup);
+            MainClone.Children.Clear();
             for (int i = 0; i < Maket.Lenght(); i++ )
                MainClone.Children.Add(Maket.Clone(clone, i));
         }
@@ -51,6 +39,12 @@ namespace Sotov
         private void Image_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             Close();
+        }
+
+        private void Secret_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            AdminPanel adminPanel = new AdminPanel();
+            adminPanel.Show();
         }
     }
 }

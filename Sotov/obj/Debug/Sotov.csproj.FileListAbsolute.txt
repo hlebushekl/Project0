@@ -46,3 +46,5 @@ C:\Something\Sotov\bin\Debug\FirstTry.accdb
 C:\Something\Sotov\obj\Debug\Sotov_Content.g.cs
 E:\AREF\Sotov\bin\Debug\FirstTry.accdb
 E:\AREF\Sotov\obj\Debug\Sotov_Content.g.cs
+E:\AREF\Sotov\obj\Debug\AdminPanel.g.cs
+E:\AREF\Sotov\obj\Debug\AdminPanel.baml
