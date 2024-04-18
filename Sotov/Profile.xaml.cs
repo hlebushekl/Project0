@@ -48,7 +48,8 @@ namespace Sotov
 
         private void bt_Offert_Click(object sender, RoutedEventArgs e)
         {
-
+            Offert offert = new Offert();
+            offert.Show();
         }
     }
 }

@@ -66,7 +66,7 @@
                         <StackPanel x:Name="Soup" Height="156" Width="503" Margin="5,5,5,0" Orientation="Horizontal">
                             <Image Source="/Resurs/Mi13Pro.png" Height="154" Width="126"/>
                             <StackPanel>
-                                <TextBlock Text="6.73&quot; Смартфон Xiaomi 13 Pro 512 ГБ черный" FontSize="18" Foreground="Black" Margin="5,5,5,5" Width="335" TextWrapping="Wrap" Height="108"/>
+                                <TextBlock Text="6.73&quot; Смартфон Xiaomi 13 Pro 512 ГБ черный" FontSize="18" Foreground="Black" Margin="5,5,5,5" Width="335" TextWrapping="Wrap" Height="97"/>
                                 <TextBlock Text="Ценна: 109 999₽" FontSize="24"/>
                             </StackPanel>
                             <CheckBox x:Name="CheckStack" Width="24" Height="30"/>

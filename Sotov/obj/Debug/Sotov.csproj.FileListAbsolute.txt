@@ -48,3 +48,5 @@ E:\AREF\Sotov\bin\Debug\FirstTry.accdb
 E:\AREF\Sotov\obj\Debug\Sotov_Content.g.cs
 E:\AREF\Sotov\obj\Debug\AdminPanel.g.cs
 E:\AREF\Sotov\obj\Debug\AdminPanel.baml
+E:\AREF\Sotov\obj\Debug\Offert.g.cs
+E:\AREF\Sotov\obj\Debug\Offert.baml

@@ -1,0 +1,70 @@
+﻿<Window x:Class="Sotov.Offert"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Sotov"
+        mc:Ignorable="d"
+       Title="Offert" Height="650" Width="800" WindowStyle="None" AllowsTransparency="True" WindowStartupLocation="CenterOwner">
+    <Grid Background="Bisque">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="15"/>
+            <RowDefinition Height="14*"/>
+            <RowDefinition Height="113*"/>
+        </Grid.RowDefinitions>
+        <Border x:Name="Head" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" CornerRadius="0,0,0,10">
+            <Border.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#D1913C"/>
+                    <GradientStop Color="#FFD194" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left">
+                <Image HorizontalAlignment="Left" Source="/Resurs/pngwing.com.png"/>
+                <TextBlock FontSize="22" Height="33" Foreground="White"><Run Text="Сотовик"/></TextBlock>
+            </StackPanel>
+        </Border>
+        <Border x:Name="Head2" Grid.Column="1" Grid.Row="1" Grid.RowSpan="1" CornerRadius="0,0,10,0" Grid.ColumnSpan="2" Margin="266,0,0,0">
+            <Border.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#D1913C"/>
+                    <GradientStop Color="#FFD194" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+            <Label x:Name="Return" Content="Возврат к основному окну" Foreground="White" HorizontalAlignment="Center" Height="45" Margin="0,10,0,15" FontSize="18" Background="{x:Null}" MouseLeftButtonUp="Return_MouseLeftButtonUp"/>
+        </Border>
+        <Border x:Name="UpHead" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3">
+            <Border.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFD194"/>
+                    <GradientStop Color="#D1913C" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+        </Border>
+        <Border x:Name="Main" Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="3">
+            <StackPanel>
+                <Label Margin="0,5,0,5" FontSize="24" Content="Имя получателя" HorizontalContentAlignment="Center"/>
+                <TextBox x:Name="CB_Model" Margin="0,5,0,5" FontSize="24" Width="475" Background="DarkGray"/>
+                <Label Margin="0,5,0,5" FontSize="24" Content="Проверьте номер телефона" HorizontalContentAlignment="Center"/>
+                <TextBox x:Name="TB_Name" Margin="0,5,0,5" FontSize="24" Width="475" Background="DarkGray"/>
+                <Label Margin="0,5,0,5" FontSize="24" Content="Заказ" HorizontalContentAlignment="Center"/>
+                <TextBox x:Name="TB_pzu" Margin="0,5,0,5" FontSize="24" Width="475" Background="DarkGray"/>
+                <Label Margin="0,5,0,5" FontSize="24" Content="Адресс доставки" HorizontalContentAlignment="Center"/>
+                <ComboBox x:Name="TB_Cost" Margin="0,5,0,5" FontSize="24" Width="475" Background="DarkGray"/>
+                <Label Margin="0,5,0,5" FontSize="24" Content="Выберите способ оплаты" HorizontalContentAlignment="Center"/>
+                <StackPanel Height="38" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,10">
+                    <Label Content="При получении" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <CheckBox x:Name="cb_Nal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Background="Bisque" BorderBrush="#FF3CD227" Checked="cb_Nal_Checked"/>
+                    <Label Content="Онлайн"  FontSize="24" Margin="15,0,0,0" />
+                    <CheckBox x:Name="cb_Online" HorizontalAlignment="Center" VerticalAlignment="Bottom" Background="Bisque" BorderBrush="#FF2ED816" Checked="cb_Online_Checked"/>
+                </StackPanel>
+                <Button x:Name="bt_Add" Margin="0,5,0,5" FontSize="24" Height="66" Background="DarkGray" Width="372" Content="Заказать" Foreground="White" Click="bt_Add_Click"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>

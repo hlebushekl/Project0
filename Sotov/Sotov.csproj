@@ -64,6 +64,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FirstTryDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Offert.xaml.cs">
+      <DependentUpon>Offert.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Registr.xaml.cs">
       <DependentUpon>Registr.xaml</DependentUpon>
     </Compile>
@@ -90,6 +93,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Offert.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Profile.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
