@@ -55,7 +55,7 @@
                     <StackPanel x:Name="Makeup" Width="786" Orientation="Horizontal" Margin="0,5,0,5">
                         <Image Source="/Resurs/Mi13Pro.png" Height="154" Width="126"/>
                         <TextBlock VerticalAlignment="Stretch" Text="6.73&quot; Смартфон Xiaomi 13 Pro 512 ГБ черный" FontSize="18" Foreground="Black" Margin="5,5,5,5" Width="445"/>
-                        <TextBlock Text="Ценна: 109 999₽"  FontSize="24" Width="194" VerticalAlignment="Stretch" FontStyle="Italic" Margin="5,5,5,5"/>
+                        <TextBlock Text="Ценна: 109999₽"  FontSize="24" Width="194" VerticalAlignment="Stretch" FontStyle="Italic" Margin="5,5,5,5"/>
                     </StackPanel>
                 </StackPanel>
             </ScrollViewer>

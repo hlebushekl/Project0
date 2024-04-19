@@ -26,6 +26,11 @@ namespace Sotov
                     {
                         check.Click += click;
                     }
+                    else if(chill is StackPanel stackPanel)
+                    {
+                        TextBlock description = stackPanel.Children[0] as TextBlock;
+                        TextBlock price = stackPanel.Children[1] as TextBlock;
+                    }
                 }
             }
         }
@@ -33,6 +38,23 @@ namespace Sotov
         private void click(object sender, RoutedEventArgs e)
         {
             CheckBox check = (CheckBox)sender;
+            StackPanel stack = check.Parent as StackPanel;
+            stack = stack.Children[1] as StackPanel;
+            TextBlock description = stack.Children[0] as TextBlock;
+            TextBlock cost = stack.Children[1] as TextBlock;
+            string hleb = cost.Text.TrimEnd('₽').Split()[1];
+
+            if (check.IsChecked.Value)
+            {
+                Spisok.Text += description.Text + "\n";
+                SotovHelper.price += int.Parse(hleb);
+            }
+            else
+            {
+                Spisok.Text = Spisok.Text.Replace(description.Text + "\n", "");
+                SotovHelper.price -= int.Parse(hleb);
+            }
+            Costs.Text = "Итого: " + SotovHelper.price.ToString() + "₽";
         }
 
         private void Return_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
@@ -48,6 +70,8 @@ namespace Sotov
 
         private void bt_Offert_Click(object sender, RoutedEventArgs e)
         {
+            SotovHelper.cost = Costs.Text.TrimStart();
+
             Offert offert = new Offert();
             offert.Show();
         }

@@ -51,11 +51,11 @@
         </Border>
         <Border Grid.Column="0" Grid.Row="3" Grid.RowSpan="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" CornerRadius="0,45,45,0" Background="#FFD1913C">
             <StackPanel>
-                <TextBlock Margin="5,40,5,5" Foreground="White" FontSize="24" Text="Список покупок:"/>
+                <TextBlock Margin="5,40,5,5" Foreground="White" FontSize="24" Text="Список заказа:"/>
                 <ScrollViewer CanContentScroll="True" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
-                    <TextBlock x:Name="Spisok" Background="{x:Null}" Width="263" Height="309" Text=""/>
+                    <TextBlock x:Name="Spisok" TextWrapping="Wrap" Width="263" Height="309" Text="" FontSize="14" Foreground="White"/>
                 </ScrollViewer>
-                <TextBlock Foreground="White" FontSize="24" Height="42" Text="Итого:"/>
+                <TextBlock x:Name="Costs" Foreground="White" FontSize="24" Height="42" Text="Итого: "/>
                 <Button x:Name="bt_Offert" Height="100" Background="#FFD1913C" BorderBrush="#FFFBFBFB" Foreground="White" FontSize="24" Content="Офромить заказ" Click="bt_Offert_Click"/>
             </StackPanel>
         </Border>
@@ -67,7 +67,7 @@
                             <Image Source="/Resurs/Mi13Pro.png" Height="154" Width="126"/>
                             <StackPanel>
                                 <TextBlock Text="6.73&quot; Смартфон Xiaomi 13 Pro 512 ГБ черный" FontSize="18" Foreground="Black" Margin="5,5,5,5" Width="335" TextWrapping="Wrap" Height="97"/>
-                                <TextBlock Text="Ценна: 109 999₽" FontSize="24"/>
+                                <TextBlock Text="Ценна: 109999₽" FontSize="24"/>
                             </StackPanel>
                             <CheckBox x:Name="CheckStack" Width="24" Height="30"/>
                         </StackPanel>

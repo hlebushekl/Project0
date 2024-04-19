@@ -49,22 +49,22 @@
         <Border x:Name="Main" Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="3">
             <StackPanel>
                 <Label Margin="0,5,0,5" FontSize="24" Content="Имя получателя" HorizontalContentAlignment="Center"/>
-                <TextBox x:Name="CB_Model" Margin="0,5,0,5" FontSize="24" Width="475" Background="DarkGray"/>
+                <TextBox x:Name="tb_Name" Margin="0,5,0,5" FontSize="24" Width="475" Background="DarkGray"/>
                 <Label Margin="0,5,0,5" FontSize="24" Content="Проверьте номер телефона" HorizontalContentAlignment="Center"/>
-                <TextBox x:Name="TB_Name" Margin="0,5,0,5" FontSize="24" Width="475" Background="DarkGray"/>
+                <TextBox x:Name="tb_Phone" Margin="0,5,0,5" FontSize="24" Width="475" Background="DarkGray"/>
                 <Label Margin="0,5,0,5" FontSize="24" Content="Заказ" HorizontalContentAlignment="Center"/>
-                <TextBox x:Name="TB_pzu" Margin="0,5,0,5" FontSize="24" Width="475" Background="DarkGray"/>
+                <TextBox x:Name="tb_Zakaz" Margin="0,5,0,5" FontSize="24" Width="475" Background="DarkGray"/>
                 <Label Margin="0,5,0,5" FontSize="24" Content="Адресс доставки" HorizontalContentAlignment="Center"/>
-                <ComboBox x:Name="TB_Cost" Margin="0,5,0,5" FontSize="24" Width="475" Background="DarkGray"/>
+                <ComboBox x:Name="CB_dost" Margin="0,5,0,5" FontSize="24" Width="475" Background="DarkGray"/>
                 <Label Margin="0,5,0,5" FontSize="24" Content="Выберите способ оплаты" HorizontalContentAlignment="Center"/>
                 <StackPanel Height="38" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,10">
                     <Label Content="При получении" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                    <CheckBox x:Name="cb_Nal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Background="Bisque" BorderBrush="#FF3CD227" Checked="cb_Nal_Checked"/>
+                    <CheckBox x:Name="cb_Nal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Background="Bisque" BorderBrush="#FF3CD227" Checked="cb_Nal_Checked" Unchecked="cb_Nal_Unchecked"/>
                     <Label Content="Онлайн"  FontSize="24" Margin="15,0,0,0" />
-                    <CheckBox x:Name="cb_Online" HorizontalAlignment="Center" VerticalAlignment="Bottom" Background="Bisque" BorderBrush="#FF2ED816" Checked="cb_Online_Checked"/>
+                    <CheckBox x:Name="cb_Online" HorizontalAlignment="Center" VerticalAlignment="Bottom" Background="Bisque" BorderBrush="#FF2ED816" Checked="cb_Online_Checked" Unchecked="cb_Online_Unchecked"/>
                 </StackPanel>
                 <Button x:Name="bt_Add" Margin="0,5,0,5" FontSize="24" Height="66" Background="DarkGray" Width="372" Content="Заказать" Foreground="White" Click="bt_Add_Click"/>
-            </StackPanel>
+                </StackPanel>
         </Border>
     </Grid>
 </Window>

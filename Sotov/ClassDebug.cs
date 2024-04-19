@@ -9,6 +9,14 @@ using System.Data;
 
 namespace Sotov
 {
+    //Не ьейте оно само
+    public static class SotovHelper
+    {
+        public static string name = null;
+        public static string phone = null;
+        public static string type = null;
+        public static int price = 0;
+    }
     public static class ClassDebug
     {
         public static bool res = false;
@@ -20,7 +28,7 @@ namespace Sotov
     {
         //Константы для изменения шаблона
         static readonly string Name = "6.73&quot; Смартфон Xiaomi 13 Pro 512 ГБ черный";
-        static readonly string Price = "Ценна: 109 999₽";
+        static readonly string Price = "Ценна: 109999₽";
         static readonly string Picture = "/Resurs/Mi13Pro.png";
 
         /// <summary>
